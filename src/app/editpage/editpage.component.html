@@ -1,0 +1,141 @@
+<form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="ID" nzRequired>ID</nz-form-label>
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <input
+        nz-input
+        name="ID"
+        formControlName="ID"
+        type="text"
+        id="ID"
+        placeholder="请输入修改的id"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="fullName" nzRequired>姓名</nz-form-label>
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <input
+        nz-input
+        name="fullName"
+        formControlName="fullName"
+        type="text"
+        id="fullName"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="dataOfBirth" nzRequired
+      >出生日期</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <nz-date-picker formControlName="dataOfBirth"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="gender" nzRequired>性别</nz-form-label>
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <nz-radio-group formControlName="gender">
+        <label nz-radio nzValue="A">男</label>
+        <label nz-radio nzValue="B">女</label>
+        <label nz-radio nzValue="C">未指明</label>
+      </nz-radio-group>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="membershipType" nzRequired
+      >会员类型</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <nz-select name="membershipType" formControlName="membershipType">
+        <nz-option nzValue="Option1" nzLabel="基本"></nz-option>
+        <nz-option nzValue="Option2" nzLabel="高级"></nz-option>
+        <nz-option nzValue="Option3" nzLabel="公司"></nz-option>
+        <nz-option nzValue="Option4" nzLabel="学生"></nz-option>
+        <nz-option nzValue="Option5" nzLabel="日卡"></nz-option>
+      </nz-select>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="membershipStartDay" nzRequired
+      >会员开始日期</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <nz-date-picker formControlName="membershipStartDay"></nz-date-picker>
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="contactNumber" nzRequired
+      >联系电话</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项 且 只能为11位">
+      <input
+        nz-input
+        name="contactNumber"
+        formControlName="contactNumber"
+        type="contactNumber"
+        id="contactNumber"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="emergencyContactNumber" nzRequired
+      >紧急联系电话</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项 且 只能为11位">
+      <input
+        nz-input
+        name="emergencyContactNumber"
+        formControlName="emergencyContactNumber"
+        type="emergencyContactNumber"
+        id="emergencyContactNumber"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="email" nzRequired>邮箱</nz-form-label>
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <input
+        nz-input
+        name="email"
+        formControlName="email"
+        type="email"
+        id="email"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="residentialAddress" nzRequired
+      >地址</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14" nzErrorTip="必填项">
+      <input
+        nz-input
+        name="residentialAddress"
+        formControlName="residentialAddress"
+        type="residentialAddress"
+        id="residentialAddress"
+      />
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-form-label [nzSpan]="6" nzFor="medicalCondition"
+      >医疗条件</nz-form-label
+    >
+    <nz-form-control [nzSpan]="14">
+      <input
+        nz-input
+        name="medicalCondition"
+        formControlName="medicalCondition"
+        type="medicalCondition"
+        id="medicalCondition"
+      />
+    </nz-form-control>
+  </nz-form-item>
+
+  <nz-form-item nz-row class="sbmit">
+    <nz-form-control [nzSpan]="14" [nzOffset]="6">
+      <button nz-button>修改</button>
+    </nz-form-control>
+  </nz-form-item>
+</form>

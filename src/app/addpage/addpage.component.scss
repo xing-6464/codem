@@ -1,0 +1,42 @@
+// .form {
+//   text-align: center;
+//   label {
+//     display: flex;
+//     margin: auto;
+//     justify-content: space-between;
+//     width: 30%;
+//     margin-top: 10px;
+//     span {
+//       font-size: 20px;
+//     }
+//     input {
+//       width: 20rem;
+//       font-size: 20px;
+//     }
+//   }
+//   button {
+//     margin-top: 10px;
+//     font-size: 20px;
+//     padding: 2px;
+//     background-color: #fff;
+//   }
+// }
+
+form {
+  text-align: center;
+  nz-form-item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    input {
+      width: 80%;
+      font-size: 1.4rem;
+    }
+    nz-select {
+      width: 80%;
+    }
+    nz-date-picker {
+      width: 80%;
+    }
+  }
+}

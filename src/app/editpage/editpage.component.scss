@@ -1,0 +1,18 @@
+form {
+  text-align: center;
+  nz-form-item {
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    input {
+      width: 80%;
+      font-size: 1.4rem;
+    }
+    nz-select {
+      width: 80%;
+    }
+    nz-date-picker {
+      width: 80%;
+    }
+  }
+}
